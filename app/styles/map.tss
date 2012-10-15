@@ -1,0 +1,20 @@
+"#view": {
+	
+},
+"#searchHolder": {
+	top: 0,
+	height: 44,
+	backgroundColor: '#000'
+},
+'#searchField': {
+	top: 4,
+	bottom: 4,
+	left: 4,
+	right: 4,
+	backgroundColor: '#FFF',
+	returnKeyType: Ti.UI.RETURNKEY_SEARCH,
+	hintText: 'Search of Address'
+},
+'#map': {
+	top: 44
+}

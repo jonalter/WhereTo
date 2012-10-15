@@ -1,0 +1,8 @@
+<Alloy>
+	<View id="view">
+		<View id="searchHolder">
+			<TextField id="searchField"/>
+		</View>
+		<View ns="Ti.Map" id="map"/>
+	</View>
+</Alloy>

@@ -1,0 +1,19 @@
+"#tabGroup": {
+	
+},
+"#tab1": {
+	title: "Map"
+},
+"#tab2": {
+	title: "tab2"
+},
+"#win1": {
+	title: "Map",
+	backgroundColor: "blue",
+	navBarHidden: true
+},
+"#win2": {
+	title: "win 2",
+	backgroundColor: "white"
+}
+

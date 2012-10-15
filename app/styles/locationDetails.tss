@@ -1,0 +1,6 @@
+"#win": {
+	backgroundColor: "orange"
+},
+"#tableView": {
+	style:  Ti.UI.iPhone.TableViewStyle.GROUPED
+}

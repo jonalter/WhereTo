@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="acs-oauth-secret-production" type="string">F4EmrWKQcsES0Bl9NvJL5U1dQHcUy3HC</property>
+    <property name="acs-oauth-key-production" type="string">BJYx4RwZ2kxY1LpbBoIGypuRf3DGrV90</property>
+    <property name="acs-api-key-production" type="string">Hi1CHUUFMbGiRgH04LUOiqMBvDcComqz</property>
+    <property name="acs-oauth-secret-development" type="string">JI4DM533ghKO2uFa0ynEpybJK3E2Wgf2</property>
+    <property name="acs-oauth-key-development" type="string">3Emd25MA318BPyZgbawnfapVOCyViU0g</property>
+    <property name="acs-api-key-development" type="string">mh19UtbWCNQ2pTx0fnpmZGaZP4RrDuga</property>
+    <deployment-targets>
+        <target device="mobileweb">true</target>
+        <target device="iphone">true</target>
+        <target device="ipad">true</target>
+        <target device="android">true</target>
+        <target device="blackberry">false</target>
+    </deployment-targets>
+    <sdk-version>2.1.3.GA</sdk-version>
+    <id>com.appcelerator.naviapp.jalter</id>
+    <name>Where To</name>
+    <version>1.0</version>
+    <publisher>jalter</publisher>
+    <url>http://</url>
+    <description>not specified</description>
+    <copyright>2012 by jalter</copyright>
+    <icon>appicon.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>7a48ab9b-7679-41f6-9f07-abe26f622baa</guid>
+    <property name="ti.ui.defaultunit">system</property>
+    <iphone>
+        <orientations device="iphone">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+        </orientations>
+        <orientations device="ipad">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
+        </orientations>
+    </iphone>
+    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="commonjs" version="2.3.0">ti.cloud</module>
+        <module platform="android" version="1.0">ti.physicalSizeCategory</module>
+    </modules>
+    <plugins>
+        <plugin version="1.0">ti.alloy</plugin>
+    </plugins>
+</ti:app>

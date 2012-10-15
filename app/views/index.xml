@@ -1,0 +1,13 @@
+<Alloy>
+	<TabGroup id="tabGroup">
+<!-- 		<Label id="label" onClick="doClick">Hello, World</Label> -->
+		<Tab id="tab1">
+			<Window id="win1"/>
+		</Tab>
+		<Tab id="tab2">
+			<Window id="win2">
+<!-- 				<Require src="Map" id="Map"/> -->
+			</Window>
+		</Tab>
+	</TabGroup>
+</Alloy>
