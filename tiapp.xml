@@ -54,6 +54,7 @@
     <modules>
         <module platform="commonjs" version="2.3.0">ti.cloud</module>
         <module platform="android" version="1.0">ti.physicalSizeCategory</module>
+        <module platform="commonjs" version="1.0.2">ti.navibridge</module>
     </modules>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>

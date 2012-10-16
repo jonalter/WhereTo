@@ -33,7 +33,17 @@ $.map.addEventListener('click', function(e) {
 });
 
 $.map.addEventListener('regionChanged', function(e) {
+	// Ti.API.info(JSON.stringify(e));
 	currentRegion = e;
+});
+
+$.map.addEventListener('postlayout', function() {
+	$.map.region = {
+		"longitudeDelta":3.515625,
+		"longitude":-122.025146484375,
+		"latitude":37.19970619616021,
+		"latitudeDelta":3.2114288310468737
+	};
 });
 
 function createAnnotations(params) {

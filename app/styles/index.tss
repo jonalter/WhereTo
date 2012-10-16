@@ -5,7 +5,7 @@
 	title: "Map"
 },
 "#tab2": {
-	title: "tab2"
+	title: "Contacts"
 },
 "#win1": {
 	title: "Map",
@@ -13,7 +13,7 @@
 	navBarHidden: true
 },
 "#win2": {
-	title: "win 2",
+	title: "Contacts",
 	backgroundColor: "white"
 }
 

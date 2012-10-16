@@ -1,0 +1,9 @@
+{
+    "description": "Appcelerator Cloud Services",
+    "directories": {
+        "lib": "."
+    },
+    "main": "ti.navibridge",
+    "name": "ti.navibridge",
+    "version": "1.0.2"
+}

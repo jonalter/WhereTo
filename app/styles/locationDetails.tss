@@ -1,5 +1,7 @@
 "#win": {
-	backgroundColor: "orange"
+	backgroundColor: "orange",
+	navBarHidden: false,
+	title: 'Info'
 },
 "#tableView": {
 	style:  Ti.UI.iPhone.TableViewStyle.GROUPED

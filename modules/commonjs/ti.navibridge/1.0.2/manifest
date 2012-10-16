@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.2
+description: Appcelerator Cloud Services
+author: Dawson Toth and Jeff English
+license: Appcelerator Commercial License
+copyright: Copyright (c) 2011-2012 by Appcelerator,  Inc.
+
+
+# these should not be edited
+name: ti.navibridge
+moduleid: ti.navibridge
+guid: c3c42ae2-0a09-494b-b781-1c3f07a747f8
+platform: commonjs
+minsdk: 2.1.0
