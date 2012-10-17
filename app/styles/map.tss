@@ -3,18 +3,31 @@
 },
 "#searchHolder": {
 	top: 0,
-	height: 44,
-	backgroundColor: '#000'
+	height: 44
+},
+"#searchBGColor": {
+	backgroundColor: '#000',
+	opacity: 0.5
 },
 '#searchField': {
-	top: 4,
-	bottom: 4,
-	left: 4,
-	right: 4,
+	height: 30,
+	right: 7,
+	left: 74,
 	backgroundColor: '#FFF',
 	returnKeyType: Ti.UI.RETURNKEY_SEARCH,
-	hintText: 'Search of Address'
+	borderRadius: 8,
+	paddingLeft: 5,
+	paddingRight: 5,
+	hintText: 'Search or Address',
+	opacity: 0.8
+},
+'#changeSearchEngineButton': {
+	title: 'Title',
+	left: 7,
+	width: 60,
+	height: 30,
+	opacity: 0.8
 },
 '#map': {
-	top: 44
+	top: 0
 }

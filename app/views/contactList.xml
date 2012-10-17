@@ -1,5 +1,0 @@
-<Alloy>
-	<View id="view">
-		<TableView id="tableView"/>
-	</View>
-</Alloy>

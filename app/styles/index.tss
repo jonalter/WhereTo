@@ -4,16 +4,10 @@
 "#tab1": {
 	title: "Map"
 },
-"#tab2": {
-	title: "Contacts"
-},
 "#win1": {
 	title: "Map",
-	backgroundColor: "blue",
-	navBarHidden: true
-},
-"#win2": {
-	title: "Contacts",
-	backgroundColor: "white"
+	backgroundColor: "white",
+	navBarHidden: true,
+	tabBarHidden: true
 }
 

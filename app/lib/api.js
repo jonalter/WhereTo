@@ -1,28 +1,5 @@
 var Log = require('log');
 
-exports.searchGooglePlaces = function(params) {
-	Log.Info("API.searchGooglePlaces");
-	
-	param = params || {};
-	var query = params.query,
-		lat = params.lat,
-		lng = params.lng,
-		callback = params.callback;
-
-	var requestUrl = Alloy.CFG.googleAPIUrl +
-		'key=' + Alloy.CFG.googleAPIKey +
-		'&location=' + lat + ',' + lng + 
-		'&radius=50000' + 
-		'&sensor=false' +
-		'&query=' + query;
-
-	ServerCall({
-		requestUrl : requestUrl
-	}, function(json, passthrough){
-		callback && callback(json, passthrough);
-	});
-}
-
 function ServerCall(params,callback,progress) {
 	var requestUrl = params.requestUrl;
 	var passthrough = params.passthrough;
@@ -41,16 +18,6 @@ function ServerCall(params,callback,progress) {
 			var json = JSON.parse(this.responseText);
 			
 			if(json){
-				
-				// // Saving cookie data to be sent with future requests
-				// if(Platform.name === 'mobileweb'){
-				// 	var cookiesString = document.cookie;
-				// }else{
-				// 	// iOS
-				// 	var cookiesString = xhr.getResponseHeader('Set-Cookie');
-				// }
-				// COOKIES = Utils.convertSetCookieToObject(cookiesString, COOKIES);
-								
 				callback( json, passthrough );
 			}else{
 				Log.Error(' - - - - - - - 1 - - - - - - - -');
@@ -100,3 +67,6 @@ function ServerCall(params,callback,progress) {
 		callback();
 	}
 }
+
+exports.ServerCall = ServerCall;
+

@@ -1,8 +1,6 @@
 {
 	"global": {
-		"DEBUG": true,
-		"googleAPIUrl": "https://maps.googleapis.com/maps/api/place/textsearch/json?",
-		"googleAPIKey": "" 
+		"DEBUG": true
 	}, 
 	"env:development": {}, 
 	"env:test": {}, 
