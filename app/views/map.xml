@@ -3,8 +3,11 @@
 		<View ns="Ti.Map" id="map"/>
 		<View id="searchHolder">
 			<View id="searchBGColor"/>
-			<TextField id="searchField"/>
 			<Button id="changeSearchEngineButton"/>
+			<TextField id="searchField">
+				<View id="clearButton"/>
+			</TextField>
+			<Button id="searchButton"/>
 		</View>
 	</View>
 </Alloy>

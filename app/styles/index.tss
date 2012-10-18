@@ -6,7 +6,7 @@
 },
 "#win1": {
 	title: "Map",
-	backgroundColor: "white",
+	backgroundImage: "Default.png",
 	navBarHidden: true,
 	tabBarHidden: true
 }

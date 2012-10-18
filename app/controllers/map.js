@@ -12,26 +12,34 @@ var oldId = Ti.App.Properties.getString('currentEngineId', null);
 oldId = oldId || "google";
 setCurrentEngine(SearchEngines.engines[oldId]);
 
-$.searchField.addEventListener('return', function(e) {
-	// alert('Search: '+JSON.stringify(currentRegion));
-	var lat = (currentRegion) ? currentRegion.latitude : 37.390749,
-		lng = (currentRegion) ? currentRegion.longitude : -122.081651;
-	
-	e.source.value && currentEngine.apiCall({
-		query: e.source.value,
-		lat: lat,
-		lng: lng,
-		callback: function(json) {
-			currentEngine.parseResponse(json, function(json) {
-				$.map.annotations = createAnnotations({
-					json: json
-				});
-				$.map.annotations.length && $.map.selectAnnotation($.map.annotations[0]);
-			});
-		}
+$.searchField.addEventListener('focus', function(e) {
+	$.searchField.animate({
+		right: $.searchField.rightFocused,
+		duration: 200
 	});
-	
+	$.searchButton.animate({
+		right: $.searchButton.rightFocused,
+		duration: 200
+	});
 });
+
+$.searchField.addEventListener('blur', function(e) {
+	$.searchField.animate({
+		right: $.searchField.rightBlurred,
+		duration: 200
+	});
+	$.searchButton.animate({
+		right: $.searchButton.rightBlurred,
+		duration: 200
+	});
+});
+
+$.clearButton.addEventListener('click', function() {
+	$.searchField.value = "";
+});
+
+$.searchField.addEventListener('return', runSearch);
+$.searchButton.addEventListener('click', runSearch);
 
 $.changeSearchEngineButton.addEventListener('click', function(){
 	showSearchEngineList(function(engineData){
@@ -73,10 +81,32 @@ $.map.addEventListener('postlayout', function() {
 	});
 });
 
+function runSearch(e) {
+	// alert('Search: '+JSON.stringify(currentRegion));
+	var lat = (currentRegion) ? currentRegion.latitude : 37.390749,
+		lng = (currentRegion) ? currentRegion.longitude : -122.081651;
+	
+	$.searchField.value && currentEngine.apiCall({
+		query: $.searchField.value,
+		lat: lat,
+		lng: lng,
+		callback: function(json) {
+			currentEngine.parseResponse(json, function(json) {
+				$.map.annotations = createAnnotations({
+					json: json
+				});
+				$.map.annotations.length && $.map.selectAnnotation($.map.annotations[0]);
+			});
+		}
+	});
+	
+}
+
 function setCurrentEngine(newCurrent) {
 	currentEngine = newCurrent;
 	$.changeSearchEngineButton.title = newCurrent.title;
 	Ti.App.Properties.setString('currentEngineId', currentEngine.id );
+	runSearch();
 }
 
 function showSearchEngineList(callback) {

@@ -11,15 +11,24 @@
 },
 '#searchField': {
 	height: 30,
-	right: 7,
+	right: 74,
+	rightBlurred: 74,
+	rightFocused: 7,
 	left: 74,
 	backgroundColor: '#FFF',
 	returnKeyType: Ti.UI.RETURNKEY_SEARCH,
 	borderRadius: 8,
 	paddingLeft: 5,
-	paddingRight: 5,
+	paddingRight: 25,
 	hintText: 'Search or Address',
+	clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ALWAYS,
 	opacity: 0.8
+},
+"#clearButton": {
+	backgroundImage: 'light_x.png',
+	height: 15,
+	width: 15,
+	right: 3
 },
 '#changeSearchEngineButton': {
 	title: 'Title',
@@ -30,4 +39,13 @@
 },
 '#map': {
 	top: 0
+},
+'#searchButton': {
+	title: 'Search',
+	right: 7,
+	rightBlurred: 7,
+	rightFocused: -60,
+	width: 60,
+	height: 30,
+	opacity: 0.8
 }
